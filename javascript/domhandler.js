@@ -9,6 +9,7 @@
 	//use bootstrap to create rows, 3 columns each
 	//use counter variable to close row after 3 columns
 
+console.log("domhandler")
 
 function populatePage (inventory) {
   // Loop over the inventory and populate the page

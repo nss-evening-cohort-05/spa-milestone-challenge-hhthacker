@@ -4,6 +4,8 @@
 //It should also expose a public getter to read the array of cars 
 //(e.g. `getInventory`).
 
+console.log("carlot.js")
+
 var CarLot = (function () {
   var inventory = [];
 

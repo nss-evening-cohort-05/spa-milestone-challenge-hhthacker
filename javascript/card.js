@@ -7,3 +7,5 @@
 //and changes its background color. 
 //The function must accept one argument.
     //A car DOM element that was clicked on.
+
+    console.log("cards.js")
