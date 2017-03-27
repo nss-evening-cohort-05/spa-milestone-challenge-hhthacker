@@ -2,10 +2,10 @@
 //The function must accept one argument: A car DOM element that was clicked on.
 
 var CarLot = (function (styleEvents) {
-	var selectedCar = document.getElementsbyClassName("noclicky???");
 
 	styleEvents.resetStyle = function (clickEvent) {
-	
+		var selectedCar = document.getElementsbyClassName("noclicky");
+		console.log("reset function");
 	},
 
 	styleEvents.setStyle = function (clickEvent) {
@@ -13,9 +13,12 @@ var CarLot = (function (styleEvents) {
 			selectedCar[x].classList.remove("noclicky");
 			};
 			if (event.target.classList.contains("describe")) {
-				event.target.classList.add("clicky"); };
-				textInput.value = editScribe.innerHTML;
-				textInput.addEventListener("keyup", function (){
+				event.target.classList.add("clicky"); 
+			};
+			textInput.value = editScribe.innerHTML;
+			textInput.addEventListener("keyup", myEnter);
+	},
+	styleEvents.enterStyle = function myEnter() {
       textInput.onkeydown = function (){
         if (window.event.keyCode === 13) {
           textInput.value = "";
@@ -23,8 +26,8 @@ var CarLot = (function (styleEvents) {
           editScribe.innerHTML = textInput.value;
 			};
 		};
-	};
 
+	}
 	return styleEvents;
 
 })(CarLot || {});
