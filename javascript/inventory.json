@@ -2,6 +2,7 @@
   "cars": [
     {
       "make": "Nissan",
+      "image": "http://www.minnesotawildanimalmanagement.com/wp-content/uploads/2012/04/raccoon1.jpg",
       "model": "Rogue",
       "year": "2006",
       "price": "8999",
@@ -9,6 +10,7 @@
     },
     {
       "make": "Mazda",
+      "image": "https://www.tafensw.edu.au/__data/assets/image/0003/15285/beaver.jpg",
       "model": "Miata",
       "year": "2012",
       "price": "12999",
@@ -16,10 +18,36 @@
     },
     {
       "make": "Kia",
+      "image": "https://c402277.ssl.cf1.rackcdn.com/photos/2015/images/story_full_width/red_panda.jpg",
       "model": "Soul",
       "year": "2016",
       "price": "18999",
       "description": "Like new! With only 420 miles on it, this car feels like a cloud in heaven to drive. Keep in control with manual transmission and hand crank windows."
+    },
+    {
+      "make": "Oscar Mayer",
+      "image": "http://dachshundtreasures.com/images/colors/11301005.jpg",
+      "model": "Frankfurt",
+      "year": "2011",
+      "price": "29999",
+      "description": "Are you looking for a weiner-mobile to wizz around the midwest?! Well, here's your getaway dog!"
+    },
+    {
+      "make": "Catillac",
+      "image": "http://5932-presscdn-0-90.pagely.netdna-cdn.com/wp-content/uploads/2014/07/Cats_Bikes.jpg",
+      "model": "Kitivan",
+      "year": "1989",
+      "price": "1999",
+      "description": "A bicycle with a kitty in a basket."
+    },
+    {
+      "make": "VW",
+      "image": "https://images.sciencedaily.com/2010/03/100323212158_1_540x360.jpg",
+      "model": "Beetle",
+      "year": "2019",
+      "price": "6666",
+      "description": "Not one, butt two beetles! Previously owned by Lucy Inda Sky-WitDiamonds. Dung ball sold separately."
     }
+
   ]
 }

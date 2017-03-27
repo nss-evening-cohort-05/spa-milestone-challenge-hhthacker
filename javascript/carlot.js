@@ -18,6 +18,7 @@ var CarLot = (function () {
     getInventory: function () {
       inventoryLoader.open("GET", "inventory.json");
       inventoryLoader.send();
+      console.log("inventory", inventory);
     }
 
   };

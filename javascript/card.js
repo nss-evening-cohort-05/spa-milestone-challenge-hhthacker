@@ -2,16 +2,31 @@
 //The function must accept one argument: A car DOM element that was clicked on.
 
 var CarLot = (function (styleEvents) {
+	var selectedCar = document.getElementsbyClassName("noclicky???");
 
 	styleEvents.resetStyle = function (clickEvent) {
-//resets the border thickness and background color for each car element back to the original values. 
-	};
+	
+	},
 
 	styleEvents.setStyle = function (clickEvent) {
-//The other function changes the thickness of the border of a car element, and changes its background color. 
-
+	for (var x = 0; x < inventory.length; x++) {
+			selectedCar[x].classList.remove("noclicky");
+			};
+			if (event.target.classList.contains("describe")) {
+				event.target.classList.add("clicky"); };
+				textInput.value = editScribe.innerHTML;
+				textInput.addEventListener("keyup", function (){
+      textInput.onkeydown = function (){
+        if (window.event.keyCode === 13) {
+          textInput.value = "";
+        } else {
+          editScribe.innerHTML = textInput.value;
+			};
+		};
 	};
 
 	return styleEvents;
 
 })(CarLot || {});
+
+

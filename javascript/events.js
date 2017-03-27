@@ -2,10 +2,12 @@
 //that creates all of the `eventHandlers` for the application. 
 
 var CarLot = (function (carEvents) {
+var textInput = document.getElementById("carDescription");
+var editScribe = document.getElementById("redescribe");
 
 	carEvents.activateEvents = function () {
-		var clickystuff.addEventListener("click", fire);
-
+		var clickyCar = document.getElementsByClassName("clicky");
+		clickyCar.addEventListener("click", CarLot.setStyle());
 	}
 
 	return carEvents;
