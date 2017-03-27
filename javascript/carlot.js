@@ -1,22 +1,26 @@
-//The first IIFE should add a public function (e.g. `loadInventory`) 
-//that loads the `inventory.json` file and 
-//stores the inventory in a private variable. 
-//It should also expose a public getter to read the array of cars 
-//(e.g. `getInventory`).
-
-console.log("carlot.js")
-
 var CarLot = (function () {
   var inventory = [];
 
+//public function: parse xhr request into object array & loads the `inventory.json` file 
+//stores the inventory in a private variable. 
+
   return {
-    loadInventory: function (callback) {
+    loadInventory: function () {
       var inventoryLoader = new XMLHttpRequest();
-
       inventoryLoader.addEventListener("load", function () {
-
+      inventory = JSON.parse(this.responseText);
+      getInventory(inventory);
       });
+
+    },
+
+//a public getter to read the array of cars 
+    getInventory: function () {
+      inventoryLoader.open("GET", "inventory.json");
+      inventoryLoader.send();
     }
+
   };
 
-})();
+})(CarLot || {});
+

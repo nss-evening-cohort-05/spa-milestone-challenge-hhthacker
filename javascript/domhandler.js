@@ -1,4 +1,3 @@
-//parse xhr request into object array
 //loop over array and build card for each car for DOM
 	//includes all car information
 //each card has a class for black border around it
@@ -9,7 +8,6 @@
 	//use bootstrap to create rows, 3 columns each
 	//use counter variable to close row after 3 columns
 
-console.log("domhandler")
 
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
