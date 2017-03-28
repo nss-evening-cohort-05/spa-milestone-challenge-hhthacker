@@ -9,24 +9,24 @@ var CarLot = (function (styleEvents) {
 	},
 
 	styleEvents.setStyle = function (clickEvent) {
-	for (var x = 0; x < inventory.length; x++) {
-			selectedCar[x].classList.remove("noclicky");
-			};
-			if (event.target.classList.contains("describe")) {
-				event.target.classList.add("clicky"); 
-			};
-			textInput.value = editScribe.innerHTML;
-			textInput.addEventListener("keyup", myEnter);
-	},
-	styleEvents.enterStyle = function myEnter() {
-      textInput.onkeydown = function (){
-        if (window.event.keyCode === 13) {
-          textInput.value = "";
-        } else {
-          editScribe.innerHTML = textInput.value;
-			};
-		};
-
+		console.log("set style");
+	// for (var x = 0; x < 6; x++) {
+	// 		selectedCar[x].classList.remove("noclicky");
+	// 		};
+	// 		if (event.target.classList.contains("describe")) {
+	// 			event.target.classList.add("clicky"); 
+	// 		};
+	// 		textInput.value = editScribe.innerHTML;
+	// 		textInput.addEventListener("keyup", myEnter);
+	// },
+	// styleEvents.enterStyle = function myEnter() {
+ //      textInput.onkeydown = function (){
+ //        if (window.event.keyCode === 13) {
+ //          textInput.value = "";
+ //        } else {
+ //          editScribe.innerHTML = textInput.value;
+	// 		};
+	// 	};
 	}
 	return styleEvents;
 

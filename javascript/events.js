@@ -6,8 +6,9 @@ var textInput = document.getElementById("carDescription");
 var editScribe = document.getElementById("redescribe");
 
 	carEvents.activateEvents = function () {
-		var clickyCar = document.getElementsByClassName("clicky");
-		clickyCar.addEventListener("click", CarLot.setStyle());
+		console.log("activate events");
+		// var clickyCar = document.getElementsByClassName("clicky");
+		// clickyCar.addEventListener("click", CarLot.setStyle());
 	}
 
 	return carEvents;
