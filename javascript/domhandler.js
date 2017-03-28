@@ -8,25 +8,23 @@
 var cardDiv = document.getElementById("carCards");
 
 // Loop over the inventory and populate the page
-function populatePage (inventory) {
-	console.log("im in the dom loop", inventory);
-for (var i=0; i < 5; i++){
-	var carString = "";
+function populatePage () {
+	var thisInventory = CarLot.getInventory();
+for (var i=0; i < thisInventory.length; i++){
+	var carString = `<p>vroom</p>`;
 	carString +=`<div class="clicky"><div class="row"><div class="col-sm-6 col-md-4"><div class="thumbnail">`;
-	carString +=`<img src="${inventory.image}" alt="${inventory.model}">`;
-	carString +=`<div class="caption"><h3>${inventory.make}</h3>`;
-	carString +=`<p>${inventory.model}</p><p>${inventory.year}</p><p>${inventory.price}</p>`;
-	carString +=`<p class="describe" id="redescribe">${inventory.description}</p>`;
+	carString +=`<img src="${inventory[i].image}" alt="${inventory[i].model}">`;
+	carString +=`<div class="caption"><h3>${inventory[i].make}</h3>`;
+	carString +=`<p>${inventory[i].model}</p><p>${inventory[i].year}</p><p>${inventory.price}</p>`;
+	carString +=`<p class="describe" id="redescribe">${inventory[i].description}</p>`;
 	carString +=`</div></div></div></div></div>`;
-//	carString +=``;
+	carString +=``;
 };
 cardDiv.innerHTML = carString;
-}  
+};
+
 
 // Now that the DOM is loaded, establish all the event listeners needed
-  CarLot.activateEvents();
-
 // Load the inventory and send a callback function to be invoked after the process is complete
-CarLot.loadInventory();
-console.log("good morning");
 populatePage();
+

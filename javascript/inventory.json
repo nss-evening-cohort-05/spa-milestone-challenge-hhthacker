@@ -1,5 +1,5 @@
 {
-  "cars": [
+  "inventory": [
     {
       "make": "Nissan",
       "image": "http://www.minnesotawildanimalmanagement.com/wp-content/uploads/2012/04/raccoon1.jpg",
@@ -48,6 +48,5 @@
       "price": "6666",
       "description": "Not one, butt two beetles! Previously owned by Lucy Inda Sky-WitDiamonds. Dung ball sold separately."
     }
-
   ]
 }
