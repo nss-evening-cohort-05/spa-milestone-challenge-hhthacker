@@ -11,12 +11,12 @@ var cardDiv = document.getElementById("carCards");
 function populatePage (inventory) {
 	var carString = "";
 for (var i=0; i < inventory.inventory.length; i++) {
-	carString +=`<div class="row col-xs-4 thumbnail"><div class="noclicky">`;
+	carString +=`<div class="row col-xs-3 thumbnail"><div class="noclicky">`;
 	carString +=`<img src="${inventory.inventory[i].image}" alt="${inventory.inventory[i].model}">`;
-	carString +=`<h3>${inventory.inventory[i].make}</h3>`;
-	carString +=`<p>${inventory.inventory[i].model}</p><p>${inventory.inventory[i].year}</p><p>${inventory.inventory[i].price}</p>`;
-	carString +=`<p class="describe" id="redescribe">${inventory.inventory[i].description}</p>`;
-	carString +=`</div> </div>`;
+	carString +=`<p class="special">${inventory.inventory[i].make} ${inventory.inventory[i].model}</p>`;
+	carString +=`<p><strong>${inventory.inventory[i].price}</strong> Made in ${inventory.inventory[i].year}</p>`;
+	carString +=`<p class="describe" id="redescribe-${[i]}">${inventory.inventory[i].description}</p>`;
+	carString +=`</div></div>`;
 };
 cardDiv.innerHTML = carString;
 	};

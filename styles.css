@@ -1,5 +1,11 @@
 p {
 	color: slategray;
+	text-indent: 5px;
+}
+
+.thumbnail {
+	margin: 5px;
+	padding: 3px;
 }
 
 .clicky {
@@ -15,4 +21,10 @@ p {
 img {
 	width: 250px;
 	height: 200px;
+}
+
+.special {
+	font-size: 2em;
+	color: black;
+	text-indent: 10px;
 }

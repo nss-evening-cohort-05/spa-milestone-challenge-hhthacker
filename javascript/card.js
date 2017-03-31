@@ -2,9 +2,9 @@
 //The function must accept one argument: A car DOM element that was clicked on.
 
 var CarLot = (function (cars) {
-		var selectedCar = document.getElementsByClassName("noclicky");
 		var textInput = document.getElementById("carDescription");
-		var editScribe = document.getElementsByClassName("redescribe");
+		var editScribe = document.querySelectorAll('p[id^="redescribe-"]');
+		var selectedCar;
 
 	cars.resetStyle = function (event) {
 		console.log("reset function");
@@ -15,13 +15,19 @@ var CarLot = (function (cars) {
 		if (event.target.parentNode.classList.contains("noclicky")) {
 			event.target.parentNode.classList.remove("noclicky");
 			event.target.parentNode.classList.add("clicky");
+			event.target.
+			//event.target.
 			textInput.focus();
-			//textInput.value = editScribe.innerHTML;
-		};
+			editScribe.innerHTML = textInput.value;
+		} else if (event.target.parentNode.classList.contains("thumbnail")) {
+			event.target.classList.remove("noclicky");
+			event.target.classList.add("clicky");
+			textInput.focus();
+		}
 		textInput.addEventListener("keyup", CarLot.enterStyle);
 	},
 
-	cars.enterStyle = function myEnter() {
+	cars.enterStyle = function (event) {
       textInput.onkeydown = function (){
         if (window.event.keyCode === 13) {
           textInput.value = "";
