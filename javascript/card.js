@@ -1,34 +1,36 @@
 //The final IIFE should augment the object with two more functions. 
 //The function must accept one argument: A car DOM element that was clicked on.
 
-var CarLot = (function (styleEvents) {
+var CarLot = (function (cars) {
+		var selectedCar = document.getElementsByClassName("noclicky");
+		var textInput = document.getElementById("carDescription");
+		var editScribe = document.getElementsByClassName("redescribe");
 
-	styleEvents.resetStyle = function (clickEvent) {
-		var selectedCar = document.getElementsbyClassName("noclicky");
+	cars.resetStyle = function (event) {
 		console.log("reset function");
 	},
 
-	styleEvents.setStyle = function (clickEvent) {
-		console.log("set style");
-	// for (var x = 0; x < 6; x++) {
-	// 		selectedCar[x].classList.remove("noclicky");
-	// 		};
-	// 		if (event.target.classList.contains("describe")) {
-	// 			event.target.classList.add("clicky"); 
-	// 		};
-	// 		textInput.value = editScribe.innerHTML;
-	// 		textInput.addEventListener("keyup", myEnter);
-	// },
-	// styleEvents.enterStyle = function myEnter() {
- //      textInput.onkeydown = function (){
- //        if (window.event.keyCode === 13) {
- //          textInput.value = "";
- //        } else {
- //          editScribe.innerHTML = textInput.value;
-	// 		};
-	// 	};
+	cars.setStyle = function (event) {
+		console.log("set style", event);
+		if (event.target.parentNode.classList.contains("noclicky")) {
+			event.target.parentNode.classList.remove("noclicky");
+			event.target.parentNode.classList.add("clicky");
+			textInput.focus();
+			//textInput.value = editScribe.innerHTML;
+		};
+		textInput.addEventListener("keyup", CarLot.enterStyle);
+	},
+
+	cars.enterStyle = function myEnter() {
+      textInput.onkeydown = function (){
+        if (window.event.keyCode === 13) {
+          textInput.value = "";
+        } else {
+          editScribe.innerHTML = textInput.value;
+			};
+		};
 	}
-	return styleEvents;
+	return cars;
 
 })(CarLot || {});
 

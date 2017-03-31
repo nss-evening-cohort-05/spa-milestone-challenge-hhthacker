@@ -4,10 +4,15 @@ p {
 
 .clicky {
 	border: solid 5px black;
-	background: tomato;
+	background: thistle;
 }
 
 .noclicky {
 	border: solid 1px green;
 	background: honeydew;
+}
+
+img {
+	width: 250px;
+	height: 200px;
 }
