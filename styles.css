@@ -3,6 +3,11 @@ p {
 	text-indent: 5px;
 }
 
+img {
+	width: 250px;
+	height: 200px;
+}
+
 .thumbnail {
 	margin: 5px;
 	padding: 3px;
@@ -12,15 +17,9 @@ p {
 	border: solid 5px black;
 	background: thistle;
 }
-
 .noclicky {
 	border: solid 1px green;
 	background: honeydew;
-}
-
-img {
-	width: 250px;
-	height: 200px;
 }
 
 .special {
