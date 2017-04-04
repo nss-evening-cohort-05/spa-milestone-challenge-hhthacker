@@ -11,6 +11,8 @@ img {
 .thumbnail {
 	margin: 5px;
 	padding: 3px;
+	border: solid 1px green;
+	background: honeydew;
 }
 
 .clicky {
@@ -18,8 +20,6 @@ img {
 	background: thistle;
 }
 .noclicky {
-	border: solid 1px green;
-	background: honeydew;
 }
 
 .special {

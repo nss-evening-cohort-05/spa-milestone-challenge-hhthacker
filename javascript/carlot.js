@@ -1,5 +1,6 @@
 var CarLot = (function (cars) {
-  var inventory = [];
+  var myinventory = [];
+
 //public function: parse xhr request into object array & loads the `inventory.json` file 
 //stores the inventory in a private variable. 
   return {
@@ -11,11 +12,12 @@ var CarLot = (function (cars) {
       inventoryLoader.send(); 
     },
     parseInventory: function (inventory) {
-      inventory = JSON.parse(this.responseText);
-      populatePage(inventory);
+      myinventory = JSON.parse(this.responseText);
+      populatePage(myinventory);
     },
+
     getInventory: function () {
-    return inventory;
+    return myinventory;
   }
   };
 
