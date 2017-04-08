@@ -1,0 +1,29 @@
+p {
+	color: slategray;
+	text-indent: 5px;
+}
+
+img {
+	width: 250px;
+	height: 200px;
+}
+
+.thumbnail {
+	margin: 5px;
+	padding: 3px;
+	border: solid 1px green;
+	background: honeydew;
+}
+
+.clicky {
+	border: solid 5px black;
+	background: thistle;
+}
+.noclicky {
+}
+
+.special {
+	font-size: 2em;
+	color: black;
+	text-indent: 10px;
+}
